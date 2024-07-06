@@ -22,18 +22,38 @@ function tdp_activationFunction(){
 	$tasks_table_name = $wpdb->prefix . 'tdp_tasks';
 	$check_tasks_table = $wpdb->prepare("SHOW TABLES LIKE %s", $tasks_table_name);
 
+	//Create tasks table
 	if ($wpdb->get_var($check_tasks_table) != $tasks_table_name) {
         $charset_collate = $wpdb->get_charset_collate();
         $create_tasks_table = "CREATE TABLE $tasks_table_name (
             id int(9) NOT NULL AUTO_INCREMENT,
             title varchar(255) NOT NULL,
             description text NOT NULL,
+			assigned varchar(255) NOT NULL,
+			category_id int(9) NOT NULL,
+			priority int(2) NOT NULL,
+			due_date datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
             created_at datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
 			updated_at datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
             PRIMARY KEY  (id)
         ) $charset_collate;";
 		// Update the table with dbDelta (handles creation and upgrades of db tables; comes from upgrade.php )
 		dbDelta($create_tasks_table);
+	}
+
+	//Create categories table
+	$categories_table_name = $wpdb->prefix . 'tdp_categories';
+	$check_categories_table = $wpdb->prepare("SHOW TABLES LIKE %s", $categories_table_name);
+
+	if ($wpdb->get_var($check_categories_table) != $categories_table_name) {
+		$charset_collate = $wpdb->get_charset_collate();
+		$create_categories_table = "CREATE TABLE $categories_table_name (
+			id int(9) NOT NULL AUTO_INCREMENT,
+			title varchar(255) NOT NULL,
+			PRIMARY KEY  (id)
+		) $charset_collate;";
+		// Update the table with dbDelta (handles creation and upgrades of db tables; comes from upgrade.php )
+		dbDelta($create_categories_table);
 	}
 
 	add_option( 'TDP_Activated', true );
@@ -96,9 +116,8 @@ function admin_js() {
 		)
 	);
 	//Localize script to pass PHP variables in JS file
-	wp_localize_script('admin-js', 'addNewTaskForm', array(
-        'ajax_url' => plugin_dir_url(__FILE__) . 'admin/ajax.php',
-        'nonce'    => wp_create_nonce('tdp_add_new_task_nonce')
+	wp_localize_script('admin-js', 'adminAjax', array(
+        'ajax_url' => plugin_dir_url(__FILE__) . 'admin/ajax.php'
     ));
 }
 

@@ -462,3 +462,161 @@ Stack trace:
 #3 E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wordpress\wp-admin\admin.php(287): require_once('E:\\Andreika\\Lar...')
 #4 {main}
   thrown in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wordpress\wp-includes\class-wp-hook.php on line 324
+[06-Jul-2024 20:00:35 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_User as array in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php:9
+Stack trace:
+#0 E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-admin\admin.php(293): include()
+#1 {main}
+  thrown in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 9
+[06-Jul-2024 20:02:17 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_User as array in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php:31
+Stack trace:
+#0 E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-admin\admin.php(293): include()
+#1 {main}
+  thrown in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 31
+[06-Jul-2024 20:02:39 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_User as array in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php:31
+Stack trace:
+#0 E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-admin\admin.php(293): include()
+#1 {main}
+  thrown in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 31
+[06-Jul-2024 20:02:55 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_User as array in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php:31
+Stack trace:
+#0 E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-admin\admin.php(293): include()
+#1 {main}
+  thrown in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 31
+[06-Jul-2024 20:03:20 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_User as array in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php:31
+Stack trace:
+#0 E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-admin\admin.php(293): include()
+#1 {main}
+  thrown in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 31
+[06-Jul-2024 20:03:25 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_User as array in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php:31
+Stack trace:
+#0 E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-admin\admin.php(293): include()
+#1 {main}
+  thrown in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 31
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:03:59 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:50 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:50 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php:32
+Stack trace:
+#0 E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-admin\admin.php(293): include()
+#1 {main}
+  thrown in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:04:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:36 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 32
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "ID" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 20:05:56 UTC] PHP Warning:  Attempt to read property "user_nicename" on string in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 33
+[06-Jul-2024 21:28:52 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:28:52 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:28:52 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:28:52 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:28:52 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:28:52 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:29:13 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:29:13 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:29:13 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:29:13 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:29:13 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:29:13 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:35:46 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:35:46 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:35:46 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:35:46 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:35:46 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:35:46 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:40:15 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:40:15 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:40:15 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:40:15 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:40:15 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:40:15 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:58:18 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:58:18 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:58:18 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:58:18 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:58:18 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:58:18 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:59:37 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:59:37 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:59:37 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:59:37 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:59:37 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 21:59:37 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 22:01:07 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 22:01:07 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 22:01:07 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 22:01:07 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 22:01:07 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
+[06-Jul-2024 22:01:07 UTC] PHP Warning:  Undefined property: stdClass::$ID in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wp-content\plugins\to_do_plugin\admin\tasks.php on line 99
