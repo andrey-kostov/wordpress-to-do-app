@@ -454,3 +454,11 @@ Stack trace:
 [05-Jul-2024 19:52:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wordpress\wp-admin\includes\upgrade.php on line 2817
 [05-Jul-2024 19:52:22 UTC] PHP Warning:  Undefined variable $create_tasks_table in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wordpress\wp-content\plugins\to_do_plugin\to_do_plugin.php on line 38
 [05-Jul-2024 19:52:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wordpress\wp-admin\includes\upgrade.php on line 2817
+[06-Jul-2024 07:19:15 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "my_enqueue" not found or invalid function name in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wordpress\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wordpress\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wordpress\wp-admin\admin-header.php(118): do_action('admin_enqueue_s...', 'to_do_plugin/ad...')
+#3 E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wordpress\wp-admin\admin.php(287): require_once('E:\\Andreika\\Lar...')
+#4 {main}
+  thrown in E:\Andreika\LaragonData\ProjectsGitHub\wordpress-to-do-app\wordpress\wp-includes\class-wp-hook.php on line 324

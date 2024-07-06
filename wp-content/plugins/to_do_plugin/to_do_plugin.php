@@ -58,7 +58,7 @@ register_deactivation_hook(__FILE__,'tdp_deactivationFunction');
 function tdp_top_menu() {
     add_menu_page(
         'Task administration',
-        'To Do App',
+        'To Do Plugin',
         'manage_options',
         TDP_PLUGIN_DIR . 'admin/tasks.php',
         null,
@@ -74,13 +74,32 @@ function tdp_remove_top_menu() {
 
 //Add Submenus
 function tdp_add_submenus(){
-	add_submenu_page(TDP_PLUGIN_DIR . 'admin/tasks.php','To do App Options','Tasks','manage_options',TDP_PLUGIN_DIR . 'admin/tasks.php','',10);
-	add_submenu_page(TDP_PLUGIN_DIR . 'admin/tasks.php','To do App Categories','Categories','manage_options',TDP_PLUGIN_DIR . 'admin/categories.php','',11);
+	add_submenu_page(TDP_PLUGIN_DIR . 'admin/tasks.php','TDP - Tasks','Tasks','manage_options',TDP_PLUGIN_DIR . 'admin/tasks.php','',10);
+	add_submenu_page(TDP_PLUGIN_DIR . 'admin/tasks.php','TDP - Categories','Categories','manage_options',TDP_PLUGIN_DIR . 'admin/categories.php','',11);
 }
 //Remove Submenus
 function tdp_remove_submenus(){
 	remove_submenu_page(TDP_PLUGIN_DIR . 'admin/tasks.php',TDP_PLUGIN_DIR . 'admin/tasks.php');
 	remove_submenu_page(TDP_PLUGIN_DIR . 'admin/tasks.php',TDP_PLUGIN_DIR . 'admin/categories.php');
+}
+
+//Enqueue JS
+add_action( 'admin_enqueue_scripts', 'admin_js' );
+function admin_js() {
+	wp_enqueue_script(
+		'admin-js',
+		plugins_url( 'admin/js/admin.js', __FILE__ ),
+		array( 'jquery' ),
+		'1.0.0',
+		array(
+		   'in_footer' => true,
+		)
+	);
+	//Localize script to pass PHP variables in JS file
+	wp_localize_script('admin-js', 'addNewTaskForm', array(
+        'ajax_url' => plugin_dir_url(__FILE__) . 'admin/ajax.php',
+        'nonce'    => wp_create_nonce('tdp_add_new_task_nonce')
+    ));
 }
 
 
