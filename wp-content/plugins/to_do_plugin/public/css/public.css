@@ -1,0 +1,38 @@
+:root {
+    --danger: #f81313;
+    --inform: #006ce7;
+    --success: #00e745;
+    --white: #ffffff;
+    --gray:#c7c7c7;
+    --light_gray:#f1f1f1;
+    --transition-duration:0.3s;
+}
+
+.tdp-single-task{
+    box-shadow:inset 0 0 0 0 var(--gray);
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--light_gray);
+    cursor: pointer;
+    transition-duration: var(--transition-duration);
+}
+
+.tdp-single-task:hover{
+    box-shadow:inset 3px 3px 8px -3px var(--gray);
+    transition-duration: var(--transition-duration);
+}
+
+.tdp-single-task .tdp-single-task-title{
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.tdp-single-task .tdp-single-task-description{
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.tdp-single-task .tdp-single-task-due-date{
+    font-size: 12px;
+    font-weight: bold;
+}

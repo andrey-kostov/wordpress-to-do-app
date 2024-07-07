@@ -22,8 +22,8 @@ class TDP_Tasks extends TDPControl{
 
         $table = $this->wp_db->prefix . 'tdp_tasks';
         $data = array(
-            'title' => $title,
-            'description' =>$description,
+            'title' => sanitize_text_field($title),
+            'description' =>sanitize_textarea_field($description),
             'assigned' =>$assigned,
             'category_id' =>$category,
             'priority' =>$priority,
@@ -46,6 +46,24 @@ class TDP_Tasks extends TDPControl{
         }
     }
     //Update task
+    function tdp_update_task($data){
+        $this->wp_db->update(
+            "{$this->wp_db->prefix}tdp_tasks",
+            array(
+                'title' => sanitize_text_field($data['task_title']),
+                'description' =>sanitize_textarea_field($data['task_description']),
+                'assigned' =>$data['task_assigned'],
+                'category_id' =>$data['task_category'],
+                'priority' =>$data['task_priority'],
+                'due_date' =>$data['task_due_date']
+            ),
+            array('id' => $data['task_id']));
+        
+
+        if($this->wp_db->rows_affected) {
+            wp_send_json_success();
+        }
+    }
 
     //Get all tasks
     function tdp_get_tasks($isAjax){

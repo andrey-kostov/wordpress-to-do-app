@@ -121,5 +121,85 @@ function admin_js() {
     ));
 }
 
+//Enqueue CSS
+add_action('admin_print_styles','admin_css');
+function admin_css(){
+	wp_enqueue_style('admin-css',plugins_url( 'admin/css/admin.css', __FILE__ ),'',1,'all');
+}
+
+//Shortcodes
+function tpd_latest_five_shortcode() {
+    require_once(plugin_dir_path( __FILE__ ).'/public/class.shortcodes.php');
+	$shortcodes_instance = new Shortcodes;
+	$content = $shortcodes_instance->latest_five_shortcode();
+    // always return
+    return $content;
+}
+
+function tpd_urgent_five_shortcode() {
+	require_once(plugin_dir_path( __FILE__ ).'/public/class.shortcodes.php');
+	$shortcodes_instance = new Shortcodes;
+	$content = $shortcodes_instance->urgent_five_shortcode();
+    // always return
+    return $content;
+}
+
+function tpd_shortcodes_init() {
+	add_shortcode( 'tpd_latest_five', 'tpd_latest_five_shortcode' );
+	add_shortcode( 'tpd_urgent_five', 'tpd_urgent_five_shortcode' );
+}
+
+add_action( 'init', 'tpd_shortcodes_init' );
+
+function tdp_block_register() {
+    // Check if Gutenberg is active
+    if ( ! function_exists( 'is_plugin_active' ) ) {
+        include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+    }
+
+    if ( is_plugin_active( 'gutenberg/gutenberg.php' ) || function_exists( 'register_block_type' ) ) {
+        // Register the block editor script
+        wp_register_script(
+            'tdp-block-script',
+            plugin_dir_url(__FILE__).'public/js/tdp-block.js',
+            array( 'wp-blocks', 'wp-element', 'wp-editor' ),
+            filemtime( plugin_dir_path( __FILE__ ).'public/js/tdp-block.js' )
+        );
+
+        // Register the block editor styles
+        wp_register_style(
+            'tdp-block-editor-style',
+            plugin_dir_url(__FILE__).'public/css/tdp-block-editor.css',
+            array( 'wp-edit-blocks' ),
+            filemtime( plugin_dir_path( __FILE__ ).'public/css/tdp-block-editor.css')
+        );
+
+        // Register the front-end styles
+        wp_register_style(
+            'tdp-block-style',
+            plugin_dir_url(__FILE__).'public/css/tdp-block.css',
+            array(),
+            filemtime(plugin_dir_path( __FILE__ ).'public/css/tdp-block.css')
+        );
+
+        // Register the block
+        register_block_type( 'tdp/tdp-block', array(
+            'editor_script' => 'tdp-block-script',
+            'editor_style'  => 'tdp-block-editor-style',
+            'style'         => 'tdp-block-style',
+        ) );
+    }
+}
+add_action( 'init', 'tdp_block_register' );
+
+function enqueue_front_assets() {
+    wp_enqueue_style( 'owl-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css', array(), '2.3.4' );
+    wp_enqueue_style( 'owl-carousel-theme', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css', array(), '2.3.4' );
+	wp_enqueue_style('public-css',plugins_url( 'public/css/public.css', __FILE__ ),'',1,'all');
+
+	wp_enqueue_script( 'public-js', plugins_url( 'public/js/public.js', __FILE__ ), array( 'jquery' ), '1', true );
+    wp_enqueue_script( 'owl-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', array( 'jquery' ), '2.3.4', true );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_front_assets' );
 
 ?>

@@ -12,10 +12,11 @@
             <div class="tdp-form-wrapper">
                   <form id="tdp_add_new_category">
                   <input type="hidden" name="action" value="tdp_add_new_category">
-                  <label for="tdp_category_title">Title:</label>
-                  <input type="text" id="tdp_category_title" name="tdp_category_title" required>
-      
-                  <input type="submit" value="Submit" id="tdp_category_submit">
+                  <div class="task_category_form_wrapper wrapper">
+                        <label for="tdp_category_title">Title:</label>
+                        <input type="text" id="tdp_category_title" name="tdp_category_title" required>
+                  </div>
+                  <input type="submit" value="Submit" class="submit-button" id="tdp_category_submit">
                   </form>
             </div>
       </div>
@@ -35,9 +36,9 @@
                                     <tr>
                                           <td><?= $category->id ?></td>
                                           <td><input type="text" class="tdp_input_category" value="<?= $category->title ?>" data-id="<?= $category->id ?>"></td>
-                                          <td>
-                                                <button class="btn btn-info tdp_update_category" data-id="<?= $category->id ?>">Save</button>
-                                                <button class="btn btn-danger tdp_delete_category" data-id="<?= $category->id ?>">Delete</button>
+                                          <td class="tpd_table_actions">
+                                                <button class="tdp_update_category" data-id="<?= $category->id ?>">Save</button>
+                                                <button class="tdp_delete_category" data-id="<?= $category->id ?>">Delete</button>
                                           </td>
                                     </tr>
                               <?php endforeach ?> 

@@ -20,44 +20,51 @@
     <div class="wrap">
         <!-- New task -->
         <h2>Create new task</h2>
-        <div class="form-wrapper">
+        <div class="tdp-form-wrapper">
             <form id="tdp_add_new_task">
                 <input type="hidden" name="action" value="tdp_add_new_task">
-                <label for="tdp_task_title">Title:</label>
-                <input type="text" id="tdp_task_title" name="tdp_task_title" required>
+                <div class="task_title_wrapper wrapper">
+                    <label for="tdp_task_title">Title:</label>
+                    <input type="text" id="tdp_task_title" name="tdp_task_title" required>
+                </div>
+                <div class="task_description_wrapper wrapper">
+                    <label for="tdp_task_description">Description:</label>
+                    <textarea name="tdp_task_description" id="tdp_task_description" required></textarea>
+                </div>
+                <div class="task_assigned_wrapper wrapper">
+                    <label for="tdp_task_assigned">Assigned:</label>
+                    <select name="tdp_task_assigned" id="tdp_task_assigned">
+                        <option value="0" selected>Nobody</option>
+                        <?php foreach($users as $user) : ?>
+                            <option value="<?= $user->ID ?>"><?= $user->user_nicename ?></option>           
+                        <?php endforeach ?> 
+                    </select>
+                </div>
+                <div class="task_category_wrapper wrapper">
+                    <label for="tdp_task_category">Category:</label>
+                    <select name="tdp_task_category" id="tdp_task_category">
+                        <option value="0" selected>No category</option>
+                        <?php foreach($all_categories as $category) : ?>
+                        <option value="<?= $category->id ?>"><?= $category->title ?></option>
+                        <?php endforeach ?> 
+                    </select>
+                </div>
+                <div class="task_priority_wrapper wrapper">
+                    <label for="tdp_task_priority">Priority:</label>
+                    <select name="tdp_task_priority" id="tdp_task_priority">
+                        <option value="1" selected>No priority</option>
+                        <option value="2">Low priority</option>
+                        <option value="3">Normal</option>
+                        <option value="4">With priority</option>
+                        <option value="5">Urgent</option>
+                    </select>
+                </div>
+                <div class="task_due_wrapper wrapper">
+                    <label for="tdp_task_due_date">Due date:</label>
+                    <input type="datetime-local" name="tdp_task_due_date" id="tdp_task_due_date">
+                </div>
     
-                <label for="tdp_task_description">Description:</label>
-                <textarea name="tdp_task_description" id="tdp_task_description" required></textarea>
-
-                <label for="tdp_task_assigned">Assigned:</label>
-                <select name="tdp_task_assigned" id="tdp_task_assigned">
-                    <option value="0" selected>Nobody</option>
-                    <?php foreach($users as $user) : ?>
-                        <option value="<?= $user->ID ?>"><?= $user->user_nicename ?></option>           
-                    <?php endforeach ?> 
-                </select>
-
-                <label for="tdp_task_category">Category:</label>
-                <select name="tdp_task_category" id="tdp_task_category">
-                    <option value="0" selected>No category</option>
-                    <?php foreach($all_categories as $category) : ?>
-                    <option value="<?= $category->id ?>"><?= $category->title ?></option>
-                    <?php endforeach ?> 
-                </select>
-
-                <label for="tdp_task_priority">Priority:</label>
-                <select name="tdp_task_priority" id="tdp_task_priority">
-                    <option value="1" selected>No priority</option>
-                    <option value="2">Low priority</option>
-                    <option value="3">Normal</option>
-                    <option value="4">With priority</option>
-                    <option value="5">Urgent</option>
-                </select>
-
-                <label for="tdp_task_due_date">Due date:</label>
-                <input type="datetime-local" name="tdp_task_due_date" id="tdp_task_due_date">
-    
-                <input type="submit" value="Submit" id="tdp_task_submit">
+                <input type="submit" value="Submit" class="submit-button" id="tdp_task_submit">
             </form>
         </div>
     </div>
@@ -80,7 +87,7 @@
             </thead>
             <tbody>
                   <?php foreach($all_tasks as $task) : ?>
-                        <tr>
+                        <tr id="task-<?= $task->id ?>">
                               <td><?= $task->id ?></td>
                               <td><input type="text" class="tdp_input_title" value="<?= $task->title ?>"></td>
                               <td><textarea class="tdp_input_description"><?= $task->description ?></textarea></td>
@@ -96,7 +103,7 @@
                                 <select class="tdp_input_category">
                                         <option value="0" <?php if($task->category_id === 0) : ?>selected<?php endif ?>>No category</option>
                                         <?php foreach($all_categories as $category) : ?>
-                                            <option value="<?= $category->ID ?>" <?php if($task->category_id == $category->id) : ?>selected<?php endif ?>><?= $category->title ?></option>           
+                                            <option value="<?= $category->id ?>" <?php if($task->category_id == $category->id) : ?>selected<?php endif ?>><?= $category->title ?></option>           
                                         <?php endforeach ?> 
                                 </select>
                               </td>
@@ -112,9 +119,9 @@
                               <td><input type="datetime-local" class="tdp_input_due_date" value="<?= $task->due_date ?>"></td>
                               <td><?= $task->created_at ?></td>
                               <td><?= $task->updated_at ?></td>
-                              <td>
-                                    <button class="btn btn-info tdp_update_task" data-id="<?= $task->id ?>">Save</button>
-                                    <button class="btn btn-danger tdp_delete_task" data-id="<?= $task->id ?>">Delete</button>
+                              <td class="tpd_table_actions">
+                                    <button class="tdp_update_task" data-id="<?= $task->id ?>">Save</button>
+                                    <button class="tdp_delete_task" data-id="<?= $task->id ?>">Delete</button>
                               </td>
                         </tr>
                   <?php endforeach ?> 

@@ -1,0 +1,53 @@
+<?php
+    class Shortcodes{
+
+        private $wp_db;
+
+        public function __construct() {
+            global $wpdb;
+            $this->wp_db = $wpdb;
+        }
+
+        function get_tasks_shortcode($filter,$limit){
+            $tasks = $this->wp_db->get_results("SELECT * FROM {$this->wp_db->prefix}tdp_tasks $filter LIMIT $limit");
+
+            return $tasks;
+        }
+
+        function build_task_div($tasks){
+            // var_dump($tasks);
+            $tasks_div = '<div class="tdp-shortcode-wrapper">';
+                $tasks_div .= '<div class="owl-carousel">';
+                foreach($tasks as $task){
+                    $tasks_div .= '<div class="tdp-single-task item">';
+                        $tasks_div .= '<div class="tdp-single-task-title">'.$task->title.'</div>';
+                        $task_description = (strlen($task->description) > 200) ? substr($task->description,0,200).'...' : $task->description;
+                        $tasks_div .= '<div class="tdp-single-task-description">'.$task_description.'</div>';
+                        if(strtotime($task->due_date)>0){
+                            $tasks_div .= '<div class="tdp-single-task-due-date">Due to '.$task->due_date.'</div>';
+                        }
+                        
+                    $tasks_div .= '</div>';
+                }
+                $tasks_div .= '</div>';
+            $tasks_div .= '</div>';
+            return $tasks_div;
+        }
+
+        function latest_five_shortcode(){
+            $filter = 'ORDER BY `created_at` DESC';
+            $tasks = $this->get_tasks_shortcode($filter,5);
+            $content = $this->build_task_div($tasks);
+
+            return $content;
+        }
+
+        function urgent_five_shortcode(){
+            $filter = 'ORDER BY `priority` DESC';
+            $tasks = $this->get_tasks_shortcode($filter,5);
+            $content = $this->build_task_div($tasks);
+
+            return $content;
+        }
+    }
+?>
