@@ -61,11 +61,17 @@ jQuery( function ( $ ) {
                             tableRow += '    <option value="3" ' + (this['priority'] == '3' ? 'selected' : '') + '>Normal</option>';
                             tableRow += '    <option value="4" ' + (this['priority'] == '4' ? 'selected' : '') + '>With priority</option>';
                             tableRow += '    <option value="5" ' + (this['priority'] == '5' ? 'selected' : '') + '>Urgent</option>';
-                            tableRow +='</select></td>';                        
+                            tableRow +='</select></td>'; 
+                            
+                            tableRow += '<td><select class="tdp_input_status">';
+                            tableRow += '    <option value="0" ' + (this['task_status'] == '0' ? 'selected' : '') + '>Pending</option>';
+                            tableRow += '    <option value="1" ' + (this['task_status'] == '1' ? 'selected' : '') + '>Worked on</option>';
+                            tableRow += '    <option value="2" ' + (this['task_status'] == '2' ? 'selected' : '') + '>Completed</option>';
+                            tableRow +='</select></td>';      
 
                             tableRow += '<td><input type="datetime-local" class="tdp_input_due_date" value="'+this['due_date']+'"></td>';
-                            tableRow += '<td>'+this['created_at']+'</td>';
-                            tableRow += '<td>'+this['updated_at']+'</td>';
+                            tableRow += '<td class="tdp-dates-strict">'+this['created_at']+'</td>';
+                            tableRow += '<td class="tdp-dates-strict">'+this['updated_at']+'</td>';
 
                             tableRow += '<td class="tpd_table_actions"><button class="tdp_update_task" data-id="'+this['id']+'">Save</button>';
                             tableRow += '<button class="tdp_delete_task" data-id="'+this['id']+'">Delete</button></td>';
@@ -81,6 +87,8 @@ jQuery( function ( $ ) {
 
     //Update task
     $(document).on('click','button.tdp_update_task',function(){
+        var clicked_button = $(this);
+        clicked_button.addClass('disabled');
         var task_id = $(this).attr('data-id');
         var task_row = $('#task-'+task_id);
 
@@ -89,6 +97,7 @@ jQuery( function ( $ ) {
         var task_assigned = task_row.find('.tdp_input_assigned option:selected').val();
         var task_category = task_row.find('.tdp_input_category option:selected').val();
         var task_priority = task_row.find('.tdp_input_priority option:selected').val();
+        var task_status = task_row.find('.tdp_input_status option:selected').val();
         var task_due_date = task_row.find('.tdp_input_due_date').val();
 
         $.ajax({
@@ -102,10 +111,14 @@ jQuery( function ( $ ) {
                 task_assigned: task_assigned,
                 task_category: task_category,
                 task_priority: task_priority,
+                task_status: task_status,
                 task_due_date: task_due_date},
             success: function(data) {
                 if(data.success === true){
                     tdp_populate_tasks_table();
+                }else{
+                    alert("You didn't make any changes!");
+                    clicked_button.removeClass('disabled');
                 }
             },
             error: function(xhr, status, error) {
@@ -153,6 +166,8 @@ jQuery( function ( $ ) {
 
     //Update category
     $(document).on('click','button.tdp_update_category',function(){
+        var clicked_button = $(this);
+        clicked_button.addClass('disabled');
         $category_id = $(this).attr('data-id');
         $category_title = $(this).parent().siblings().find('.tdp_input_category').val();
         $.ajax({
@@ -162,6 +177,9 @@ jQuery( function ( $ ) {
             success: function(data) {
                 if(data.success === true){
                     tdp_populate_categories_table();
+                }else{
+                    alert("You didn't make any changes!");
+                    clicked_button.removeClass('disabled');
                 }
             },
             error: function(xhr, status, error) {

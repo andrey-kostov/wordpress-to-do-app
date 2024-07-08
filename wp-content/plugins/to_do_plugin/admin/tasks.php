@@ -81,6 +81,7 @@
                   <th>Assigned</th>
                   <th>Category</th>
                   <th>Priority</th>
+                  <th>Task Status</th>
                   <th>Due date</th>
                   <th>Created</th>
                   <th>Last modified</th>
@@ -116,9 +117,16 @@
                                     <option value="5" <?php if($task->priority == 5) : ?>selected<?php endif ?>>Urgent</option>
                                 </select>
                               </td>
+                              <td>
+                                <select class="tdp_input_status">
+                                    <option value="0" <?php if($task->task_status == 0) : ?>selected<?php endif ?>>Pending</option>
+                                    <option value="1" <?php if($task->task_status == 1) : ?>selected<?php endif ?>>Worked on</option>
+                                    <option value="2" <?php if($task->task_status == 2) : ?>selected<?php endif ?>>Completed</option>
+                                </select>
+                              </td>
                               <td><input type="datetime-local" class="tdp_input_due_date" value="<?= $task->due_date ?>"></td>
-                              <td><?= $task->created_at ?></td>
-                              <td><?= $task->updated_at ?></td>
+                              <td class="tdp-dates-strict"><?= $task->created_at ?></td>
+                              <td class="tdp-dates-strict"><?= $task->updated_at ?></td>
                               <td class="tpd_table_actions">
                                     <button class="tdp_update_task" data-id="<?= $task->id ?>">Save</button>
                                     <button class="tdp_delete_task" data-id="<?= $task->id ?>">Delete</button>

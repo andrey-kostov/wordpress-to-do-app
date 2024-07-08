@@ -36,3 +36,115 @@
     font-size: 12px;
     font-weight: bold;
 }
+
+.tdp-shortcode-wrapper{
+    max-width: 620px;
+    width: auto;
+}
+
+.tdp-shortcode-wrapper>.owl-carousel{
+    margin: 0 auto;
+}
+
+.tdp-task-actions{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tdp-task-actions>*{
+    text-align: center;
+    max-width: calc(50% - 5px);
+    min-width: 150px;
+    height: 32px;
+    border-radius: 10px;
+    border: 1px solid var(--inform);
+    color: var(--inform);
+    background: var(--white);
+    transition-duration: var(--transition-duration);
+    cursor: pointer;
+}
+
+.tdp-task-actions>button:hover{
+    color: var(--white);
+    background: var(--inform);
+    transition-duration: var(--transition-duration);
+}
+
+.tdp-shortcode-alert-wrapper{
+    display: none;
+}
+
+.tdp-shortcode-alert-wrapper.open{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999;
+    max-width: 500px;
+    min-width: 80vw;
+    background: var(--white);
+    transform: translate(-50%,-50%);
+    border: 1px solid var(--light_gray);
+    border-radius: 10px;
+}
+
+.tdp-shortcode-alert-wrapper>div{
+    z-index: 99;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: var(--white);
+    padding: 15px;
+}
+
+.tdp-shortcode-alert-wrapper>div.shortcode-popup-info{
+    min-height: 40vh;
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+.tdp-shortcode-alert-wrapper>div.shortcode-popup-info>div{
+    width: 100%;
+}
+
+.tdp-shortcode-alert-wrapper.open::after{
+    content: '';
+    position: fixed;
+    z-index: 2;
+    background: var(--light_gray);
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 1000vw;
+    height: 1000vh;
+    transform: translate(-50%,-50%);
+}
+
+.tdp-shortcode-alert-wrapper #shortcode-alert-close{
+    background: var(--danger);
+    border: none;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    top: -20px;
+    right: 20px;
+    color: var(--white);
+    font-weight: bold;
+    padding-top: 3px;
+}

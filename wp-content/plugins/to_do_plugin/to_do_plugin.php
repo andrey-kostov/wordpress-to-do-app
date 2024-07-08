@@ -32,6 +32,7 @@ function tdp_activationFunction(){
 			assigned varchar(255) NOT NULL,
 			category_id int(9) NOT NULL,
 			priority int(2) NOT NULL,
+            task_status int(1) DEFAULT 0 NOT NULL,
 			due_date datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
             created_at datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
 			updated_at datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
@@ -199,6 +200,10 @@ function enqueue_front_assets() {
 
 	wp_enqueue_script( 'public-js', plugins_url( 'public/js/public.js', __FILE__ ), array( 'jquery' ), '1', true );
     wp_enqueue_script( 'owl-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', array( 'jquery' ), '2.3.4', true );
+
+    wp_localize_script('public-js', 'publicAjax', array(
+        'ajax_url' => plugin_dir_url(__FILE__) . 'public/frontend_ajax.php'
+    ));
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_front_assets' );
 

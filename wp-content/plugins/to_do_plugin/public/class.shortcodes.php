@@ -17,6 +17,9 @@
         function build_task_div($tasks){
             // var_dump($tasks);
             $tasks_div = '<div class="tdp-shortcode-wrapper">';
+                $tasks_div .= '<div class="tdp-shortcode-alert-wrapper">
+                <div class="shortcode-popup-actions"><button id="shortcode-alert-close">X</button></div>
+                <div class="shortcode-popup-info"></div></div>';
                 $tasks_div .= '<div class="owl-carousel">';
                 foreach($tasks as $task){
                     $tasks_div .= '<div class="tdp-single-task item">';
@@ -26,6 +29,14 @@
                         if(strtotime($task->due_date)>0){
                             $tasks_div .= '<div class="tdp-single-task-due-date">Due to '.$task->due_date.'</div>';
                         }
+                        $tasks_div .= '<div class="tdp-task-actions">';
+                            $tasks_div .= '<button data-id="'.$task->id.'" class="tdp-task-info-btn">Task info</button>';
+                            $tasks_div .= '<select data-id="'.$task->id.'">';
+                               $tasks_div .='<option value="0" '.(($task->task_status == 0) ? 'selected' : '' ).'>Pending</option>';
+                               $tasks_div .='<option value="1" '.(($task->task_status == 1) ? 'selected' : '' ).'>Worked on</option>';
+                               $tasks_div .='<option value="2" '.(($task->task_status == 2) ? 'selected' : '' ).'>Completed</option>';
+                            $tasks_div .= '</select>';                            
+                        $tasks_div .= '</div>';
                         
                     $tasks_div .= '</div>';
                 }

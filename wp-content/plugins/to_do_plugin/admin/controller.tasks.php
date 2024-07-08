@@ -19,7 +19,7 @@ class TDP_Tasks extends TDPControl{
         $category = $data['category'];
         $priority = $data['priority'];
         $due_date = $data['due_date'];
-
+        
         $table = $this->wp_db->prefix . 'tdp_tasks';
         $data = array(
             'title' => sanitize_text_field($title),
@@ -55,6 +55,7 @@ class TDP_Tasks extends TDPControl{
                 'assigned' =>$data['task_assigned'],
                 'category_id' =>$data['task_category'],
                 'priority' =>$data['task_priority'],
+                'task_status' =>$data['task_status'],
                 'due_date' =>$data['task_due_date']
             ),
             array('id' => $data['task_id']));
