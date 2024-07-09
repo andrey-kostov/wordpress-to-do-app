@@ -56,7 +56,8 @@ class TDP_Tasks extends TDPControl{
                 'category_id' =>$data['task_category'],
                 'priority' =>$data['task_priority'],
                 'task_status' =>$data['task_status'],
-                'due_date' =>$data['task_due_date']
+                'due_date' =>$data['task_due_date'],
+                'updated_at' => date('Y-m-d\TH:i:sP')
             ),
             array('id' => $data['task_id']));
         

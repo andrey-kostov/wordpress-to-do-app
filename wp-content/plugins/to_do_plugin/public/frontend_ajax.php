@@ -21,6 +21,7 @@ switch ($_POST['action']) {
             "{$wpdb->prefix}tdp_tasks",
             array(
                 'task_status' =>$data['task_status'],
+                'updated_at' => date('Y-m-d\TH:i:sP')
             ),
             array('id' => $data['task_id']));
         
